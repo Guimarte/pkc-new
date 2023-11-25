@@ -62,7 +62,7 @@ class Passo1Widget extends StatelessWidget {
                     maxLines: 1,
                   ),
                   Text(
-                    'Selecione a região/estado do seu clube preferido.\nEm seguida, clique no logo do seu clube.',
+                    'Selecione o estado do seu clube preferido.\nEm seguida, clique no logo do seu clube.',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.roboto(
                         fontWeight: FontWeight.w300,

@@ -8,11 +8,11 @@ import 'endpoints.dart';
 class ClubRepository {
   AuthController authController = Get.find();
 
-  Future<List<Club>> getClubsRegionState(String region, String state) async {
+  Future<List<Club>> getClubsRegionState(String state) async {
     try {
       var response = await authController.dio.get(
           authController.url + Endpoints.getAllClubs(),
-          queryParameters: {"region": region, "state": state});
+          queryParameters: {"state": state});
 
       return Club.listFromJson(response.data);
     } on DioException catch (e) {

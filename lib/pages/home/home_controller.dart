@@ -9,11 +9,11 @@ enum SelectedStateController { none, selected }
 class HomeController extends GetxController {
   @override
   onInit() async {
-    clubs = await clubRepository.getClubsRegionState("Sudeste", "São Paulo");
+    clubs = await clubRepository.getClubsRegionState("São Paulo");
     timeSelecionado!.value = clubs!.first.name!;
     idClubSelecionado!.value = clubs!.first.clubCode!;
 
-    getClubsStateRegion("Sudeste", "São Paulo");
+    getClubsStateRegion("São Paulo");
     super.onInit();
     mudaRegiao("");
   }
@@ -120,9 +120,9 @@ class HomeController extends GetxController {
     return isAndroid.value = value;
   }
 
-  Future<void> getClubsStateRegion(String region, String state) async {
+  Future<void> getClubsStateRegion(String state) async {
     teams.clear();
-    List<Club> clubs = await clubRepository.getClubsRegionState(region, state);
+    List<Club> clubs = await clubRepository.getClubsRegionState(state);
     if (clubs != null && clubs.isNotEmpty) {
       for (Club club in clubs) {
         teams.add(Obx(() => Column(
@@ -154,7 +154,7 @@ class HomeController extends GetxController {
             )));
       }
     } else {
-      teams.add(Text("Nenhum clube vinculado a essa Região / Estado"));
+      teams.add(Text("Nenhum clube vinculado a esse Estado"));
     }
   }
 }
