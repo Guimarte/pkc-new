@@ -29,7 +29,7 @@ class Passo1Widget extends StatelessWidget {
                         decoration: TextDecoration.underline,
                         decorationColor: Color(0xff5A2684),
                         fontSize: 18),
-                    maxLines: 1,
+                    maxLines: 2,
                   ),
                   DropDownRegioes(),
                   const SizedBox(
