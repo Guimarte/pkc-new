@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pkc/pages/home/home_controller.dart';
 import 'package:pkc/widgets/step_header_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import 'id_clube_widget.dart';
@@ -54,13 +55,19 @@ class Passo3Widget extends StatelessWidget {
                               fontSize: 18),
                         ),
                       ),
-                      Text(
-                        "CLIQUE AQUI!\n ABRA O WHATSAPP E GRITE\n  'OI! CHICO'\n 'CADÊ MEUS R\$30,00?!",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                            color: Colors.white),
+                      InkWell(
+                        onTap: () {
+                          launchUrl(Uri.parse(
+                              "https://wa.me/message/7UGBBZ5RYI5KB1"));
+                        },
+                        child: Text(
+                          "CLIQUE AQUI!\n ABRA O WHATSAPP E GRITE\n  'OI! CHICO'\n 'CADÊ MEUS R\$30,00?!",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.roboto(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              color: Colors.white),
+                        ),
                       ),
                     ],
                   ),
