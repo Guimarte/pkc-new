@@ -62,9 +62,6 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-      const SizedBox(
-        width: 32,
-      ),
       Container(
         padding: EdgeInsets.symmetric(horizontal: 8),
         decoration: BoxDecoration(
