@@ -22,7 +22,7 @@ class Passo1Widget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '1º PASSO - ONDE ESTÁ SEU CLUBE DO CORAÇÃO?',
+                    '1º PASSO - ONDE ESTÁ SEU CLUBE\n DO CORAÇÃO?',
                     style: GoogleFonts.robotoCondensed(
                         color: Color(0xff5A2684),
                         fontWeight: FontWeight.bold,
