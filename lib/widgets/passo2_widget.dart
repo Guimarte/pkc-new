@@ -28,24 +28,40 @@ class Passo2Widget extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 children: [
-                  Text(
-                    '2º PASSO - ASSISTA AO VIDEO',
-                    style: GoogleFonts.robotoCondensed(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline,
-                        decorationColor: Colors.white,
-                        fontSize: 18),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '2º PASSO:',
+                        style: GoogleFonts.robotoCondensed(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.white,
+                            fontSize: 18),
+                      ),
+                      Text(
+                        ' ASSISTA AO VIDEO',
+                        style: GoogleFonts.robotoCondensed(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
+                      ),
+                    ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.white, width: 4)),
-                    width: MediaQuery.sizeOf(context).width * 0.8,
-                    // child: Image.asset('assets/images/fakevideo.png')
-                    child: YoutubePlayer(
-                      controller: _controller,
-                      aspectRatio: 16 / 9,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.white, width: 4)),
+                      width: MediaQuery.sizeOf(context).width * 0.8,
+                      // child: Image.asset('assets/images/fakevideo.png')
+                      child: YoutubePlayer(
+                        controller: _controller,
+                        aspectRatio: 16 / 9,
+                        enableFullScreenOnVerticalDrag: true,
+                      ),
                     ),
                   ),
                   Row(

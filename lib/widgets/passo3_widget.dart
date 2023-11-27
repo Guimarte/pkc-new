@@ -31,13 +31,6 @@ class Passo3Widget extends StatelessWidget {
               child: Container(
                 width: MediaQuery.sizeOf(context).width * 1,
                 height: MediaQuery.sizeOf(context).height * 0.25,
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  border: Border.all(color: Color(0xff5A2683), width: 8),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(40),
-                  ),
-                ),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -45,29 +38,29 @@ class Passo3Widget extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 20.0),
-                        child: Text(
-                          'PASSO FINAL',
-                          style: GoogleFonts.robotoCondensed(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              decoration: TextDecoration.underline,
-                              decorationColor: Colors.white,
-                              fontSize: 18),
+                        child: InkWell(
+                          onTap: () {
+                            launchUrl(Uri.parse(
+                                "https://wa.me/message/7UGBBZ5RYI5KB1"));
+                          },
+                          child: Text(
+                            'CLIQUE AQUI',
+                            style: GoogleFonts.robotoCondensed(
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold,
+                                decoration: TextDecoration.underline,
+                                decorationColor: Colors.red,
+                                fontSize: 30),
+                          ),
                         ),
                       ),
-                      InkWell(
-                        onTap: () {
-                          launchUrl(Uri.parse(
-                              "https://wa.me/message/7UGBBZ5RYI5KB1"));
-                        },
-                        child: Text(
-                          "CLIQUE AQUI!\n ABRA O WHATSAPP E GRITE\n  'OI! CHICO'\n 'CADÊ MEUS R\$30,00?!",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.roboto(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                              color: Colors.white),
-                        ),
+                      Text(
+                        "VÁ NO WHATSAPP E GRITE\n  'OI! CHICO! CADÊ MEUS R\$30,00?!'",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.roboto(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 28,
+                            color: Color(0xff5A2683)),
                       ),
                     ],
                   ),

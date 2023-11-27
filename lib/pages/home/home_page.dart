@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 14.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.red,
                           border: Border.all(),
                           borderRadius: BorderRadius.all(
                             Radius.circular(10),
@@ -57,14 +57,11 @@ class HomePage extends StatelessWidget {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(8),
-                          child: StrokeText(
-                              strokeWidth: 2,
-                              strokeColor: Color(0xff5A2684),
-                              text: " GARANTA SEU BÔNUS!",
-                              textStyle: GoogleFonts.roboto(
+                          child: Text(" GARANTA SEU BÔNUS!",
+                              style: GoogleFonts.roboto(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.red,
+                                color: Colors.white,
                                 decorationColor: Theme.of(context).cardColor,
                               )),
                         ),
@@ -80,7 +77,7 @@ class HomePage extends StatelessWidget {
                       Expanded(
                         flex: 5,
                         child: BotaoPassoWidget(
-                            fontSize: 8,
+                            fontSize: 13,
                             height: height * 0.03,
                             function: () {
                               homeController.scrollToStep(1);
@@ -93,7 +90,7 @@ class HomePage extends StatelessWidget {
                       Expanded(
                         flex: 5,
                         child: BotaoPassoWidget(
-                            fontSize: 8,
+                            fontSize: 14,
                             height: height * 0.03,
                             function: () {
                               homeController.scrollToStep(2);
@@ -106,12 +103,12 @@ class HomePage extends StatelessWidget {
                       Expanded(
                         flex: 5,
                         child: BotaoPassoWidget(
-                            fontSize: 8,
+                            fontSize: 15,
                             height: height * 0.03,
                             function: () {
                               homeController.scrollToStep(3);
                             },
-                            textoBotao: "3 - CADASTRO CHIPPIX"),
+                            textoBotao: "3 - CHAME O CHICO!"),
                       )
                     ],
                   ),

@@ -28,8 +28,8 @@ class BotaoPassoWidget extends StatelessWidget {
           function();
         },
         child: Text(textoBotao,
-            style: GoogleFonts.robotoFlex(
-              fontWeight: FontWeight.bold,
+            style: GoogleFonts.smoochSans(
+              fontWeight: FontWeight.w900,
               fontSize: fontSize,
             ),
             overflow: TextOverflow.visible,

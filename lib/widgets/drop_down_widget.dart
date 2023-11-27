@@ -15,34 +15,33 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
   List<String> estados = [
     "Estado",
     "Acre",
+    "Alagoas",
     "Amapá",
     "Amazonas",
-    "Pará",
-    "Rondônia",
-    "Roraima",
-    "Tocantins",
-    "Alagoas",
     "Bahia",
     "Ceará",
-    "Maranhão",
-    "Paraíba",
-    "Pernambuco",
-    "Piauí",
-    "Rio Grande do Norte",
-    "Sergipe",
-    "Goiás",
-    "Mato Grosso",
-    "Mato Grosso do Sul",
     "Distrito Federal",
     "Espírito Santo",
+    "Goiás",
+    "Maranhão",
+    "Mato Grosso",
+    "Mato Grosso do Sul",
     "Minas Gerais",
-    "Rio de Janeiro",
-    "São Paulo",
+    "Pará",
+    "Paraíba",
     "Paraná",
+    "Pernambuco",
+    "Piauí",
+    "Rio de Janeiro",
+    "Rio Grande do Norte",
     "Rio Grande do Sul",
-    "Santa Catarina"
+    "Rondônia",
+    "Roraima",
+    "Santa Catarina",
+    "São Paulo",
+    "Sergipe",
+    "Tocantins"
   ];
-
   width() {
     if (MediaQuery.sizeOf(context).width.isLowerThan(720)) {
       return MediaQuery.sizeOf(context).width * 0.35;
@@ -72,12 +71,17 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
         ),
         child: DropdownMenu(
           inputDecorationTheme: InputDecorationTheme(
-              border: InputBorder.none,
-              hintStyle: TextStyle(color: Colors.white)),
+            border: InputBorder.none,
+            hintStyle: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           enableSearch: false,
-          width: width(),
+          menuHeight: 250,
+          width: MediaQuery.sizeOf(context).width * 0.6,
           dropdownMenuEntries: estados.map((String value) {
             return DropdownMenuEntry(
+              style: ButtonStyle(alignment: Alignment.center),
               value: value,
               label: value,
             );
@@ -87,9 +91,12 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
             homeController
                 .getClubsStateRegion(homeController.selectedEstado.value);
           },
-          initialSelection: estados.first,
+          initialSelection: 'Estado',
           hintText: 'Estado',
-          textStyle: TextStyle(color: Colors.white, fontSize: 20),
+          textStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
         ),
       )
     ]);
