@@ -14,8 +14,7 @@ class Passo2Widget extends StatelessWidget {
   final _controller = YoutubePlayerController.fromVideoId(
     videoId: 'oOW-dffmB1Q',
     autoPlay: false,
-    params: const YoutubePlayerParams(
-        showFullscreenButton: true, showControls: true),
+    params: const YoutubePlayerParams(showControls: true),
   );
 
   @override
@@ -59,8 +58,6 @@ class Passo2Widget extends StatelessWidget {
                       // child: Image.asset('assets/images/fakevideo.png')
                       child: YoutubePlayer(
                         controller: _controller,
-                        aspectRatio: 16 / 9,
-                        enableFullScreenOnVerticalDrag: true,
                       ),
                     ),
                   ),

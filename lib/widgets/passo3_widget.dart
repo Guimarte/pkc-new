@@ -59,7 +59,7 @@ class Passo3Widget extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
-                            fontSize: 28,
+                            fontSize: 24,
                             color: Color(0xff5A2683)),
                       ),
                     ],
