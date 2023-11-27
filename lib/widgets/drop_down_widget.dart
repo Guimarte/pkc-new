@@ -78,7 +78,7 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
           ),
           enableSearch: false,
           menuHeight: 250,
-          width: MediaQuery.sizeOf(context).width * 0.8,
+          width: MediaQuery.sizeOf(context).width * 0.7,
           dropdownMenuEntries: estados.map((String value) {
             return DropdownMenuEntry(
               style: ButtonStyle(alignment: Alignment.center),

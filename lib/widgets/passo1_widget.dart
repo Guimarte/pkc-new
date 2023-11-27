@@ -14,6 +14,7 @@ class Passo1Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MediaQuery.sizeOf(context).width.isLowerThan(720)
         ? Container(
+            width: MediaQuery.sizeOf(context).width * 1,
             color: Color(0xffF7F1F7),
             key: homeController.key1,
             child: Padding(
@@ -30,7 +31,7 @@ class Passo1Widget extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             decoration: TextDecoration.underline,
                             decorationColor: Color(0xff5A2684),
-                            fontSize: 18),
+                            fontSize: 16),
                       ),
                       Text(
                         ' ONDE ESTÁ SEU CLUBE DO CORAÇÃO?',
@@ -38,7 +39,7 @@ class Passo1Widget extends StatelessWidget {
                         style: GoogleFonts.robotoCondensed(
                             color: Color(0xff5A2684),
                             fontWeight: FontWeight.bold,
-                            fontSize: 18),
+                            fontSize: 16),
                       ),
                     ],
                   ),
