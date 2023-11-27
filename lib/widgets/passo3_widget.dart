@@ -44,7 +44,7 @@ class Passo3Widget extends StatelessWidget {
                                 "https://wa.me/message/7UGBBZ5RYI5KB1"));
                           },
                           child: Text(
-                            'CLIQUE AQUI',
+                            'CLIQUE AQUI!',
                             style: GoogleFonts.robotoCondensed(
                                 color: Colors.red,
                                 fontWeight: FontWeight.bold,
