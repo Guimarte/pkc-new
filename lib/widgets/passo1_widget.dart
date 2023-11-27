@@ -42,7 +42,10 @@ class Passo1Widget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  DropDownRegioes(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: DropDownRegioes(),
+                  ),
                   const SizedBox(
                     height: 48,
                   ),
