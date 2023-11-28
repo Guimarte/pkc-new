@@ -72,16 +72,14 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
         child: DropdownMenu(
           inputDecorationTheme: InputDecorationTheme(
             border: InputBorder.none,
-            hintStyle: TextStyle(
-              color: Colors.white,
-            ),
+            hintStyle:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           enableSearch: false,
           menuHeight: 250,
           width: MediaQuery.sizeOf(context).width * 0.7,
           dropdownMenuEntries: estados.map((String value) {
             return DropdownMenuEntry(
-              style: ButtonStyle(alignment: Alignment.center),
               value: value,
               label: value,
             );
@@ -94,9 +92,7 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
           initialSelection: 'Estado',
           hintText: 'Estado',
           textStyle: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-          ),
+              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
       )
     ]);

@@ -14,7 +14,8 @@ class Passo2Widget extends StatelessWidget {
   final _controller = YoutubePlayerController.fromVideoId(
     videoId: 'oOW-dffmB1Q',
     autoPlay: false,
-    params: const YoutubePlayerParams(showControls: true),
+    params: const YoutubePlayerParams(
+        showControls: true, showFullscreenButton: true),
   );
 
   @override
