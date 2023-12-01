@@ -125,17 +125,24 @@ class HomeController extends GetxController {
     List<Club> clubs = await clubRepository.getClubsRegionState(state);
     if (clubs != null && clubs.isNotEmpty) {
       for (Club club in clubs) {
-        teams.add(Obx(() => Column(
+        teams.add(
+          Obx(
+            () => Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xffF5BD00), width: 2)),
-                  child: Image.network(
-                    club.logo!,
-                    width: 100,
-                  ),
-                ),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.red, width: 2)),
+                    child: Image.network(club.logo!, width: 100, height: 100,
+                        errorBuilder: (BuildContext context, Object exception,
+                            StackTrace? stackTrace) {
+                      // Se ocorrer um erro ao carregar a imagem principal, exibir a imagem de backup
+                      return Image.asset(
+                        'assets/images/pkc_roxo.png',
+                        width: 100,
+                        height: 100,
+                      );
+                    })),
                 Text(
                   club.name!.toUpperCase(),
                   style: const TextStyle(fontWeight: FontWeight.bold),
@@ -151,7 +158,9 @@ class HomeController extends GetxController {
                   },
                 ),
               ],
-            )));
+            ),
+          ),
+        );
       }
     } else {
       teams.add(Text("Nenhum clube vinculado a esse Estado"));

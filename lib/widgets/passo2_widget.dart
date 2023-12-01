@@ -5,6 +5,7 @@ import 'package:pkc/pages/home/home_controller.dart';
 import 'package:pkc/widgets/id_clube_widget.dart';
 import 'package:pkc/widgets/step_header_widget.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Passo2Widget extends StatelessWidget {
   Passo2Widget({super.key});
@@ -15,7 +16,7 @@ class Passo2Widget extends StatelessWidget {
     videoId: 'oOW-dffmB1Q',
     autoPlay: false,
     params: const YoutubePlayerParams(
-        showControls: true, showFullscreenButton: true),
+        showControls: true, showFullscreenButton: false),
   );
 
   @override
@@ -71,10 +72,16 @@ class Passo2Widget extends StatelessWidget {
                         width: MediaQuery.sizeOf(context).width * 0.40,
                       ),
                       const SizedBox(height: 16),
-                      Image.asset(
-                        "assets/images/apple.png",
-                        height: 64,
-                        width: MediaQuery.sizeOf(context).width * 0.40,
+                      InkWell(
+                        onTap: () {
+                          launchUrl(Uri.parse(
+                              "https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447"));
+                        },
+                        child: Image.asset(
+                          "assets/images/apple.png",
+                          height: 64,
+                          width: MediaQuery.sizeOf(context).width * 0.40,
+                        ),
                       ),
                     ],
                   )

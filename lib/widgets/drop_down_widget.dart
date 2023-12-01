@@ -80,8 +80,8 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
           width: MediaQuery.sizeOf(context).width * 0.7,
           dropdownMenuEntries: estados.map((String value) {
             return DropdownMenuEntry(
-              value: value,
-              label: value,
+              value: '${value}',
+              label: '${value}',
             );
           }).toList(),
           onSelected: (String? newValue) async {
@@ -89,8 +89,8 @@ class _DropDownRegioesState extends State<DropDownRegioes> {
             homeController
                 .getClubsStateRegion(homeController.selectedEstado.value);
           },
-          initialSelection: 'Estado',
-          hintText: 'Estado',
+          initialSelection: '               Estado',
+          hintText: '                 Estado',
           textStyle: TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
